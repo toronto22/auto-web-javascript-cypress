@@ -1,17 +1,16 @@
 /// <reference types="cypress" />
 
-import BankManagePage from "../../../selector/bank_manage_page"
+import HomePage from "../../../selector/home_page";
 
 
 describe('customer login test', () => {
-  const bankManager = new BankManagePage();
+  const homePage = new HomePage();
 
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/todo')
+    homePage.visit();
   })
 
   it('The Login button is hidden in default', () => {
-    bankManager.addCustomer();
   })
 
   it('The Login Button Is Hidden When Deselect Your Name', () => {
