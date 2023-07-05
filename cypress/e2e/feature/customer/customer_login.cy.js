@@ -1,25 +1,39 @@
 /// <reference types="cypress" />
 
-import HomePage from "../../../selector/home_page";
+import CustomerLoginPage from "../../../selector/customer_login_page";
 
 
 describe('customer login test', () => {
-  const homePage = new HomePage();
+    const customerLoginPage = new CustomerLoginPage();
+    const validUserName = "Harry Potter";
 
-  beforeEach(() => {
-    homePage.visit();
-  })
+    beforeEach(() => {
+        customerLoginPage
+            .navigate();
 
-  it('The Login button is hidden in default', () => {
-  })
-
-  it('The Login Button Is Hidden When Deselect Your Name', () => {
-  })
-
-  it('The Login Button Is Shown When Select Your Name', () => {
-  })
-  it('Login Successfully With Valid Credential', () => {
     })
-  
+
+    it('The Login button is hidden in default', () => {
+        customerLoginPage
+            .getLoginButton().should('not.be.visible');
+    })
+
+    it('The Login Button Is Hidden When Deselect Your Name', () => {
+        customerLoginPage
+            .selectYourName(validUserName)
+            .deselectYourName()
+            .getLoginButton().should('not.be.visible');
+    })
+
+    it('The Login Button Is Shown When Select Your Name', () => {
+        customerLoginPage
+            .selectYourName(validUserName)
+            .getLoginButton().should('be.visible');
+    })
+    it('Login Successfully With Valid Credential', () => {
+        customerLoginPage
+            .login(validUserName);
+    })
+
 })
 
