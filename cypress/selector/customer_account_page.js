@@ -1,6 +1,6 @@
-class  CustomerAccountPage {
+class CustomerAccountPage {
 
-    openTransactionTab(){
+    openTransactionTab() {
         cy.xpath(this.transactionsTab).click();
 
         return this;
@@ -26,6 +26,6 @@ class  CustomerAccountPage {
     startDateInput = '#start';
     endDateInput = '#end';
     resetButton = '//button[text()="Reset"]';
-  };
+}
 
-  export default CustomerAccountPage;
+export default CustomerAccountPage;

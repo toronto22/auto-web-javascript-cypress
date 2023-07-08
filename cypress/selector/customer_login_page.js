@@ -1,9 +1,10 @@
-class  CustomerLoginPage {
+class CustomerLoginPage {
     navigate() {
         cy.visit("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer");
         // cy.visit("https://www.google.com");
         return this;
     }
+
     login(username) {
         cy.xpath(this.yourNameSelect).select(username);
         cy.xpath(this.loginButton).click();
@@ -11,7 +12,7 @@ class  CustomerLoginPage {
         return this;
     }
 
-    getLoginButton(){
+    getLoginButton() {
         return cy.xpath(this.loginButton);
     }
 
@@ -26,14 +27,13 @@ class  CustomerLoginPage {
         return this;
     }
 
-    getYourNameSelect(){
+    getYourNameSelect() {
         return cy.xpath(this.yourNameSelect);
     }
 
     yourNameSelect = '//select[@id="userSelect"]';
     loginButton = '//button[text()="Login"]';
-  }
-
+}
 
 
 export default CustomerLoginPage;

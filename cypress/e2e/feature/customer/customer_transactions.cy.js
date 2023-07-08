@@ -2,20 +2,19 @@
 
 
 describe('customer transactions test', () => {
-  beforeEach(() => {
-    cy.visit('https://example.cypress.io/todo')
-  })
+    beforeEach(() => {
+    })
 
-  it('Customer deposits money with valid amount', () => {
-  })
+    it('Customer deposits money with valid amount', () => {
+    })
 
-  it('Customer is unable to withdraw the money that exceed the balance', () => {
-  })
-  
-  it('Customer withdraws money with valid amount', () => {
-  })
-  
-  it('Customer resets the customer transactions', () => {
-  })
+    it('Customer is unable to withdraw the money that exceed the balance', () => {
+    })
+
+    it('Customer withdraws money with valid amount', () => {
+    })
+
+    it('Customer resets the customer transactions', () => {
+    })
 })
 

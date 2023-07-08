@@ -14,7 +14,7 @@ describe('customer login test', () => {
     })
 
     afterEach(
-        ()=>{
+        () => {
             cy.clearAllCookies();
             cy.clearAllLocalStorage();
             cy.clearAllSessionStorage();

@@ -2,15 +2,14 @@
 
 
 describe('viewing customer account test', () => {
-  beforeEach(() => {
-    cy.visit('https://example.cypress.io/todo')
-  })
+    beforeEach(() => {
+    })
 
-  it('Customer Views Default Account Information Details', () => {
-  })
+    it('Customer Views Default Account Information Details', () => {
+    })
 
-  it('Customer Views Other Account Information Details', () => {
-  })
-  
+    it('Customer Views Other Account Information Details', () => {
+    })
+
 })
 

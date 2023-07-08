@@ -1,6 +1,6 @@
-class  BasePage {
+class BasePage {
 
-    logout(){
+    logout() {
         cy.xpath(this.logoutButton).click();
 
         return this;
