@@ -1,6 +1,8 @@
 class  CustomerLoginPage {
     navigate() {
         cy.visit("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer");
+        // cy.visit("https://www.google.com");
+        return this;
     }
     login(username) {
         cy.xpath(this.yourNameSelect).select(username);
@@ -22,6 +24,10 @@ class  CustomerLoginPage {
         const defaultValue = "---Your Name---"
         this.selectYourName(defaultValue);
         return this;
+    }
+
+    getYourNameSelect(){
+        return cy.xpath(this.yourNameSelect);
     }
 
     yourNameSelect = '//select[@id="userSelect"]';

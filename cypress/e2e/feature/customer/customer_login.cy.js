@@ -13,6 +13,14 @@ describe('customer login test', () => {
 
     })
 
+    afterEach(
+        ()=>{
+            cy.clearAllCookies();
+            cy.clearAllLocalStorage();
+            cy.clearAllSessionStorage();
+        }
+    )
+
     it('The Login button is hidden in default', () => {
         customerLoginPage
             .getLoginButton().should('not.be.visible');
@@ -34,6 +42,5 @@ describe('customer login test', () => {
         customerLoginPage
             .login(validUserName);
     })
-
 })
 

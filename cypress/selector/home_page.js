@@ -3,9 +3,15 @@ class  HomePage {
     bankManagerLoginButton = '//button[text()="Bank Manager Login"]';
 
     visit() {
-      return  cy.visit('https://shop.demoqa.com/my-account/');
+        cy.visit('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login');
+
+        return this;
     }
-  };
+
+    accessLoginPage(){
+        cy.xpath(this.customerLoginButton).click();
+    }
+  }
 
 
 export default HomePage;
