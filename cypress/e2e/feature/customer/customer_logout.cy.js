@@ -9,6 +9,7 @@ describe('customer logout test', () => {
     const customerLoginPage = new CustomerLoginPage();
     const basePage = new BasePage();
     const validUserName = "Harry Potter";
+
     beforeEach(() => {
         customerLoginPage
             .navigate()
