@@ -54,6 +54,25 @@ class CustomerAccountPage {
         return cy.xpath(this.balanceLabel);
     }
 
+    getCurrency(){
+        return cy.xpath(this.currencyLabel);
+    }
+
+    getAccountNumber(){
+        return cy.xpath(this.accountNumberLabel);
+    }
+
+    getCustomerName(){
+        return cy.xpath(this.customerNameLabel);
+    }
+
+    selectAccount(accountNumber){
+        cy.xpath(this.accountSelect).select(accountNumber);
+
+        return this;
+    }
+
+
     messageLabel = '//*[@ng-show="message"]';
     customerNameLabel = '//strong/span';
     accountNumberLabel = '(//strong[@class="ng-binding"])[1]';
@@ -62,6 +81,7 @@ class CustomerAccountPage {
     transactionsTab = '//button[@ng-class="btnClass1"]';
     depositTab = '//button[@ng-class="btnClass2"]';
     withdrawTab = '//button[@ng-class="btnClass3"]';
+    accountSelect = '//select[@id="accountSelect"]';
 
     //deposit tab
     depositAmountInput = '//input[@ng-model="amount"]';
