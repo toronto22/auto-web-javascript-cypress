@@ -2,15 +2,15 @@ class BankManagePage {
     //Actions
     addCustomer(firstName, lastName, postCode) {
         cy.xpath(this.addCustomerTab).click();
-        if(firstName!==''){
+        if (firstName !== '') {
             cy.xpath(this.firstNameInput).type(firstName);
 
         }
-        if(lastName!=='') {
+        if (lastName !== '') {
             cy.xpath(this.lastNameInput).type(lastName);
         }
 
-        if(postCode!=='') {
+        if (postCode !== '') {
             cy.xpath(this.postCodeInput).type(postCode);
         }
 
@@ -19,21 +19,53 @@ class BankManagePage {
         return this;
     }
 
+    openAccount(customer, currency) {
+        cy.xpath(this.openAccountTab).click();
+        if (customer !== '') {
+            cy.get(this.customerSelect).select(customer);
+        }
+
+        if (currency !== '') {
+            cy.get(this.currencySelect).select(currency)
+        }
+
+        cy.xpath(this.processButton).click();
+
+        return this;
+    }
+    getCustomerSelect(){
+        return cy.get(this.customerSelect);
+    }
+
+    getCurrencySelect(){
+        return cy.get(this.currencySelect);
+    }
+
+    openCustomerTab(){
+        cy.xpath(this.customersTab).click();
+
+        return this;
+    }
+
+    getCustomerRecords(){
+        return cy.xpath(this.customersRecords)
+    }
+
     navigate() {
         cy.visit('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager');
 
         return this;
     }
 
-    getPostCodeInput(){
+    getPostCodeInput() {
         return cy.xpath(this.postCodeInput);
     }
 
-    getFirstNameInput(){
+    getFirstNameInput() {
         return cy.xpath(this.firstNameInput);
     }
 
-    getLastNameInput(){
+    getLastNameInput() {
         return cy.xpath(this.lastNameInput);
     }
 
