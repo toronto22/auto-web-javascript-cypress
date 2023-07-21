@@ -28,3 +28,9 @@ npx cypress run --record --key 3db77b18-0357-418f-b1d8-4b89b23fca3d
 ## Issue
 
 - Language problem when use Firefox, the Firefox browser switch to local user language instead of English.
+
+## reference:
+https://github.com/marketplace/actions/test-reporting
+
+## TODO
+- write README.md
