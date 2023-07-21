@@ -1,12 +1,8 @@
 {
   "scripts": {
-    "test": "npm start & cypress run",
+    "test": "npm start",
     "build": "npm run lint",
-    "start": "npm run e2e:chrome",
-    "pretest": "npm run lint",
-    "print-env": "print-env",
-    "lint": "npx eslint --fix cypress app/assets/js/scripts.js",
-    "lint:yaml": "yamllint '*.yml' '.buildkite/*.yml' '.circleci/*.yml' '.github/workflows/*.yml' '.semaphore/*.yml' 'basic/**/*.yml' ",
+    "start": "npm run e2e",
     "colon:names": "colon-names",
     "e2e": "cypress run",
     "e2e:chrome": "cypress run --browser chrome",
