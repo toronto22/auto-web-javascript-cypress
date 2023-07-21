@@ -16,4 +16,4 @@ jobs:
         if: success() || failure()        # run this step even if previous step failed
         with:
           name: test-results
-          path: results/junit.xml
+          path: results/my-test-output-[hash].xml
