@@ -1,7 +1,7 @@
 class CustomerLoginPage {
     navigate() {
         cy.visit("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer");
-        // cy.visit("https://www.google.com");
+
         return this;
     }
 
