@@ -8,12 +8,10 @@ jobs:
   report:
     permissions: write-all
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ 16 ]
     steps:
       - uses: dorny/test-reporter@v1
         with:
+          node-version: 16
           artifact: test-results            # artifact name
           name: Tests Result                # Name of the check run which will be created
           path: '*.xml'                     # Path to test results (inside artifact .zip)
