@@ -2,6 +2,20 @@ Base URL: https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
 
 https://www.browserstack.com/guide/run-cypress-tests-in-parallel-without-dashboard
 
+## How to run the Cypress test
+To run the Cypress test, we can open terminal and execute command:
+```shell
+## To run test following command is define `test` in `package.json` file
+npx cypress run test
+## to run cypress in default
+npx cypress run
+## to run cypress on Chrome browser
+npx cypress run e2e:chome
+## to run cypress on record mode
+npx cypress run e2e:record
+
+```
+
 ## CI with Dashboard
 
 Create cypress project on Dashboard:
@@ -16,13 +30,13 @@ We have to add projectId into `cypress.config.js` file
 
 ```js
 module.exports = {
-    projectId: "vbf851",
+    projectId: "{your-cypress-project-id}",
     // ...rest of the Cypress project config
 }
 ```
 To run the project with cypress dashboard, we need run the following command with our `key`:
 ```shell
-npx cypress run --record --key 3db77b18-0357-418f-b1d8-4b89b23fca3d
+npx cypress run --record --key {your-key}
 ```
 
 ## Issue
