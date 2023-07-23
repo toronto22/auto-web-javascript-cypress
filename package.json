@@ -6,13 +6,21 @@
     "colon:names": "colon-names",
     "e2e": "cypress run",
     "e2e:chrome": "cypress run --browser chrome",
+    "e2e:firefox": "cypress run --browser firefox",
     "e2e:record": "cypress run --record",
     "e2e:record:chrome": "cypress run --record --browser chrome",
     "e2e:record:edge": "cypress run --record --browser edge",
     "e2e:record:firefox": "cypress run --record --browser firefox",
     "e2e:record:parallel": "cypress run --record --parallel",
     "cy:run": "cypress run",
-    "cy:run:record": "cypress run --record"
+    "cy:run:record": "cypress run --record",
+    "test:ci": "run-p --race start e2e",
+    "test:ci:chrome": "run-p --race start e2e:chrome",
+    "test:ci:record": "run-p --race start e2e:record",
+    "test:ci:record:chrome": "run-p --race start e2e:record:chrome",
+    "test:ci:record:edge": "run-p --race start e2e:record:edge",
+    "test:ci:record:firefox": "run-p --race start e2e:record:firefox",
+    "test:ci:record:parallel": "run-p --race start e2e:record:parallel"
   },
   "devDependencies": {
     "cypress": "^12.17.0"
